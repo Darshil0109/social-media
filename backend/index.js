@@ -27,14 +27,14 @@ app.get('/api/tasks', (req, res) => {
 });
 
 // POST a new task
-// app.post('/api/tasks', (req, res) => {
-//   const newTask = {
-//     id: tasks.length + 1,
-//     text: req.body.text
-//   };
-//   tasks.push(newTask);
-//   res.status(201).json(newTask);
-// });
+app.post('/api/tasks', (req, res) => {
+  const newTask = {
+    id: tasks.length + 1,
+    text: req.body.text
+  };
+  tasks.push(newTask);
+  res.status(201).json(newTask);
+});
 
 // Start server
 app.listen(port, () => {
